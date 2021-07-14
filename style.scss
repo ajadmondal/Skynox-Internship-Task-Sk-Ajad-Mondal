@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Chonburi&family=Nunito:wght@200&display=swap');
+body{
+    margin: 0;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+// product section-----------------------------------
+.product_containter{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+//product images-------------
+.product_image{
+    width: 50%;
+    .small_image_container{
+        margin-top: 0.5rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        img{
+            border-style: solid;
+            border-color: white;
+            border-width: 2px;
+            width: 17%;
+            transition: all .2s ease;
+            &:hover{
+                border-color: black;
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+//big banner section---------
+.big_img{
+    width: 100%;
+    position: relative;
+    .banner_icon{
+        font-size: 23px;
+        color: azure;
+        display: none;
+        transition: all .3s ease;
+    }
+    &:hover{
+            cursor: pointer;
+            .banner_icon{
+                display: block;
+            }
+    }
+}
+.bg_img{
+    width: 100%;
+}
+
+.fa-chevron-circle-right{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+}
+.fa-chevron-circle-left{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+}
+// product detail section----------
+.product_detail{
+    width: 50%;
+    padding-left: 4.5rem;
+}
+.title{
+    font-family: 'Chonburi', sans-serif;
+    font-size: 2rem;
+}
+h5{
+    text-decoration: bold;
+    font-size: 1rem;
+}
+p{
+    font-size: 0.9rem;
+}
+.review{
+    margin-top: 2rem;
+    p{
+        font-size: 0.8rem;
+        margin-top: 0.6rem;
+        span{
+            color: rgb(8, 161, 59);
+        }
+    }
+}
+.stars{
+    display: flex;
+    // margin-bottom: 0;
+    i{
+        display: block;
+        color: rgb(59, 206, 125);
+        font-size: small;
+        margin-right: 1px;
+    }
+}
+.submit_review{
+    text-decoration: underline;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.btns{
+    display: flex;
+    align-items: center;
+    button{
+        font-family: 'Nunito', sans-serif;
+        font-weight: bolder;
+        padding: 0.7rem 1.8rem;
+        border: none;
+        border-style: solid;
+        border-color: black;
+        border-width: 1.5px;
+        border-radius: 2px;
+    }
+}
+.btn_cart{
+    margin-right: 0.8rem;
+    color: white;
+    background-color: black;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: white;
+        color: black;
+        cursor: pointer;
+    }
+}
+.btn_wishlist{
+    color: black;
+    background-color: white;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: black;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+//Lower section --------------------------------------
+.lower_section{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    margin: 8rem auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{ 
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+}
+.card_detail{
+    margin: 0 1rem;
+}
+.card_title{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.card_icon{
+        display: block;
+        font-size: larger;
+        color: rgb(59, 58, 58);
+}
+
+//media queries-------------------------------------
+@media (max-width: 1100px) {
+    
+    .product_containter{
+        width: 80%;
+    }
+    .lower_section{
+        width: 80%;
+    }
+}
+@media (max-width: 1060px){
+    .product_containter{
+        width: 85%;
+    }
+    .lower_section{
+        width: 85%;
+    }
+}
+@media (max-width: 1000px){
+    .product_containter{
+        width: 90%;
+    }
+    .lower_section{
+        width: 90%;
+    }
+}
+@media (max-width: 935px){
+    .product_containter{
+        flex-direction: column;
+        width: 70%;
+    }
+    .product_image{
+        width: 100%;
+    }
+    .product_detail{
+        width: 100%;
+        padding-left: 0;
+    }
+    .lower_section{
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 50%;
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 667px){
+    .lower_section{
+        width: 80%;
+    }
+    .product_containter{
+        width: 80%;
+    }
+}
+@media (max-width: 480px){
+    .lower_section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .card{
+        width: 100%;
+    }
+}
+@media (max-width: 420px){
+    .lower_section{
+        width: 85%;
+    }
+    .product_containter{
+        width: 85%;
+    }
+    .btns{
+        flex-direction: column;
+        align-items: flex-start;
+        button{
+            margin-top: 0.7rem;
+        }
+    }
+}
